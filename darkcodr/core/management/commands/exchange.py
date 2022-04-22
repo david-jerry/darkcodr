@@ -99,7 +99,7 @@ class Command(BaseCommand):
             Currency.objects.update_or_create(code="AUD", defaults={"symbol": "$", "price": Decimal(au_rate)})
             LOGGER.info(f"AUD rate updated to {au_rate}")
         else:
-            LOGGER.error(f"AUD rate not updated")
+            LOGGER.error("AUD rate not updated")
 
         if ca_res.status_code == 200:
             ca_data = ca_res.json()
@@ -107,7 +107,7 @@ class Command(BaseCommand):
             Currency.objects.update_or_create(code="CAD", defaults={"symbol": "$", "price": Decimal(ca_rate)})
             LOGGER.info(f"CAD rate updated to {ca_rate}")
         else:
-            LOGGER.error(f"CAD rate not updated")
+            LOGGER.error("CAD rate not updated")
 
         if ch_res.status_code == 200:
             ch_data = ch_res.json()
@@ -115,7 +115,7 @@ class Command(BaseCommand):
             Currency.objects.update_or_create(code="CHF", defaults={"symbol": "CHF", "price": Decimal(ch_rate)})
             LOGGER.info(f"CHF rate updated to {ch_rate}")
         else:
-            LOGGER.error(f"CHF rate not updated")
+            LOGGER.error("CHF rate not updated")
 
         if dk_res.status_code == 200:
             dk_data = dk_res.json()
@@ -123,7 +123,7 @@ class Command(BaseCommand):
             Currency.objects.update_or_create(code="DKK", defaults={"symbol": "kr", "price": Decimal(dk_rate)})
             LOGGER.info(f"DKK rate updated to {dk_rate}")
         else:
-            LOGGER.error(f"DKK rate not updated")
+            LOGGER.error("DKK rate not updated")
 
         if se_res.status_code == 200:
             se_data = se_res.json()
@@ -131,7 +131,7 @@ class Command(BaseCommand):
             Currency.objects.update_or_create(code="SEK", defaults={"symbol": "kr", "price": Decimal(se_rate)})
             LOGGER.info(f"SEK rate updated to {se_rate}")
         else:
-            LOGGER.error(f"SEK rate not updated")
+            LOGGER.error("SEK rate not updated")
 
         if za_res.status_code == 200:
             za_data = za_res.json()
@@ -139,7 +139,7 @@ class Command(BaseCommand):
             Currency.objects.update_or_create(code="ZAR", defaults={"symbol": "R", "price": Decimal(za_rate)})
             LOGGER.info(f"ZAR rate updated to {za_rate}")
         else:
-            LOGGER.error(f"ZAR rate not updated")
+            LOGGER.error("ZAR rate not updated")
 
         if ae_res.status_code == 200:
             ae_data = ae_res.json()
@@ -147,7 +147,7 @@ class Command(BaseCommand):
             Currency.objects.update_or_create(code="AED", defaults={"symbol": "د.إ", "price": Decimal(ae_rate)})
             LOGGER.info(f"AED rate updated to {ae_rate}")
         else:
-            LOGGER.error(f"AED rate not updated")
+            LOGGER.error("AED rate not updated")
 
 
 
