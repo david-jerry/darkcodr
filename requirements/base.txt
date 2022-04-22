@@ -36,7 +36,8 @@ django-countries-plus==2.0.0
 
 geocoder==1.38.1
 ratelim==0.1.6
-django-tinymce==3.4.0
+# django-tinymce==3.4.0
+django-tinymce4-lite==1.8.0 # https://pypi.org/project/django-tinymce4-lite/
 django-filebrowser-no-grappelli==4.0.0 #https://github.com/smacker/django-filebrowser-no-grappelli
 
 # Language packages for django
