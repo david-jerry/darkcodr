@@ -1,0 +1,442 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{{ block.super }} — {% trans 'High Performance Software Solutions Provider' %}{% endblock title %}
+{% block description %}{{ block.super }}{% endblock description %}
+{% block kw %}{% trans 'software developers, python developer, jeremiah david, darkcodr, dark coder, website mentor, mentorship program, online learning' %}{% endblock %}
+{% block og_author %}{{ block.super }}{% endblock %}
+{% block og_desc %}{{ block.super }}{% endblock %}
+{% block can_link %}{% url 'home' %}{% endblock %}
+
+{% block content %}
+<section class="w-screen h-screen pt-20 relative flex items-center">
+  <video class="absolute top-0 left-0 w-screen h-full object-cover" src="{% static 'videos/globe.mp4' %}" muted="muted" loop="loop" autoplay="autoplay"></video>
+  <div class="absolute w-full h-full top-0 left-0 bg-dark/95 mix-blend-normal"></div>
+  <div class="md:w-2/4 w-[calc(100%_-_64px)] relative left-8 right-8 md:right-14 md:left-14 top-0 h-full items-start object-center flex-col flex">
+    <div class="absolute w-full h-min left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 space-y-5">
+      <h1 class="whitespace-normal font-black light flex object-center font-raleway md:text-6xl text-4xl tracking-wider">
+        {% trans 'High Performance Software Solutions Provider' %}
+      </h1>
+      <div class="w-20 h-1 bg-variant-1"></div>
+      <!-- <p class="text-light font-raleway tracking-wide block">
+        We are a team of software developers, designers, and developers who are passionate about building high performance software solutions.
+      </p> -->
+      <h2 class="text-light whitespace-normal font-raleway tracking-wide block md:text-xl text-sm">
+        {% trans 'Our purpose is to benefit our clients' %}
+        <span class="text-variant-1 font-bold tracking-wider block whitespace-normal">— {% trans 'Their People, Their Products and Their Services' %}</span>
+      </h2>
+
+      <div class="md:flex items-center space-y-4 md:space-y-0 md:space-x-6 pt-6 md:pt-14">
+        <button class="w-full md:w-40 flex-none bg-variant-1 rounded-xl py-4 px-6 font-black font-raleway hover:scale-105 focus:scale-105 duration-[400ms] ease-linear">
+          <a href="{% url 'home' %}" class="text-dark font-bold tracking-wider block">
+            {% trans 'Get A Quote' %}
+          </a>
+        </button>
+        <button class="w-full md:w-40 flex-none bg-light rounded-xl py-4 px-6 font-black font-raleway hover:scale-105 focus:scale-105 duration-[400ms] ease-linear">
+          <a href="{% url 'home' %}" class="text-dark font-bold tracking-wider block">
+            {% trans 'Enter Shop' %}
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="hidden xl:flex flex-col md:w-2/4 w-0 h-full top-0 md:right-14 object-center relative">
+    <div class="absolute w-[420px] h-[420px] left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 ">
+      <div class="group absolute w-52 aspect-[1/1] -top-16 space-y-4">
+        <div class="bg-anchor rounded-l-full rounded-tr-full overflow-hidden">
+          <img src="{% static 'images/back-nobg.png' %}" alt="no business illustration" class="h-52 aspect-[1/1] object-cover">
+        </div>
+        <div class="ml-[60px] rounded-r-full rounded-tl-full w-64 h-8 font-bold font-raleway space-x-4 px-6 bg-gray-700 flex items-center">
+          <div class="w-2 h-2 rounded-full bg-anchor animate-ping"></div>
+          <span>{% trans 'Software Development' %}</span>
+        </div>
+      </div>
+
+      <div class="absolute group top-8 -right-52 w-min h-min space-y-4">
+        <div class=" w-64 h-64  bg-variant-1 rounded-r-full rounded-tl-full overflow-hidden">
+          <img src="{% static 'images/team-nobg.png' %}" alt="team collaboration" class="w-64 aspect-[1/1] object-cover">
+        </div>
+        <div class="rounded-l-full rounded-tr-full w-[245px] h-8 font-bold font-raleway space-x-4 px-6 bg-gray-700 -ml-[70px] flex items-center">
+          <span>{% trans 'Business Automation' %}</span>
+          <div class="w-2 h-2 rounded-full bg-variant-1 motion-safe:animate-ping-slow"></div>
+        </div>
+      </div>
+
+      <div class="absolute group top-64 left-16 w-min h-min space-y-4">
+        <div class=" w-36 h-36  bg-variant-2 rounded-l-full rounded-tr-full overflow-hidden">
+          <img src="{% static 'images/automate-business-nobg.png' %}" alt="team collaboration" class="w-36 aspect-[1/1] object-cover -mb-14 block">
+        </div>
+        <div class="rounded-r-full rounded-tl-full w-[170px] h-8 font-bold font-raleway space-x-4 px-6 bg-gray-700 ml-[45%] flex items-center">
+          <div class="w-2 h-2 rounded-full bg-variant-2 motion-safe:animate-ping-slower"></div>
+          <span class="text-xs">{% trans 'Brand Designing' %}</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- proposed brands location -->
+<section class="hidden shadow-xl w-screen px-6 md:px-14 h-min bg-variant-1 md:flex flex-none items-center relative">
+  <div class="md:w-2/3 h-min w-full md:px-10 py-6">
+    <h3 class="text-3xl md:text-6xl font-black font-raleway text-dark">{% trans 'Imagine and build anything' %}.</h3>
+  </div>
+  <div class="w-12 h-1 bg-light md:w-1 md:h-24"></div>
+  <div class="w-full h-min md:px-10 py-6">
+    <h3 class="font-bold font-raleway text-2xl text-dark">{% trans 'Know what a '%}<strong class="font-black text-3xl">{% trans 'Software Solution' %}</strong> {% trans 'is?'%}</h3>
+    <p class="text-dark font-raleway">{% trans 'A software solution is typically a software, custom-built or configured to solve a specific customer problem. It could include:'%} <strong>{% trans 'Custom Software Development. Customized Assembly of multiple software products. Custom Implementation of existing software platforms or products. — Google' %}</strong></p>
+  </div>
+</section>
+
+<!-- brief about us -->
+<section class="overflow-hidden relative w-screen h-min bg-gray-700 font-raleway  md:px-14 items-center flex flex-col object-center py-14">
+  <div class="w-[70%] h-min md:py-10 space-y-4 md:space-y-8 z-30">
+    <h4 class="text-variant-1 font-black font-raleway text-left md:text-left uppercase">{% trans 'Why choose Darkcodr Codes?' %}</h4>
+    <h2 class="text-light font-black font-raleway text-xl md:text-5xl text-left md:text-left">
+      {% trans 'This is simply because, we exist with a singular purpose to effectively automate your business processes, cut down on your time and resources spent, while increasing the revenue for your business.' %}'
+    </h2>
+  </div>
+</section>
+
+<!-- services -->
+<section class="w-screen h-min">
+  <div class="w-screen h-min flex items-center">
+    <div class="flex w-full md:w-1/2 md:h-[420px] aspect-[1/1] object-center md:aspect-[1/2] relative">
+      <img src="{% static 'images/what-we-do.jpg' %}" alt="what we do" class="w-full h-full object-cover absolute">
+      <div class="w-full h-full bg-dark/80 absolute"></div>
+      <div class="flex flex-col md:w-1/3 object-center h-min space-y-3 z-30 cursor-pointer group absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2">
+        <h3 class="font-black font-raleway md:text-6xl uppercase flex md:text-center">{% trans 'How we get things done!' %}</h3>
+        <div class="h-1 w-2/3 duration-[400ms] bg-variant-1"></div>
+      </div>
+    </div>
+
+    <div class="flex w-full md:w-1/2 md:h-[420px] aspect-[1/1] md:aspect-[1/2] relative">
+      <div class="space-y-3 md:space-y-6 w-2/3 h-min absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2">
+        <p class="text-xs md:text-xl font-raleway">{% trans "to learn about how we can help your business, check out our areas of expertise and don't hesitate to shoot us a question!" %}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="font-raleway mx-auto my-8 w-[calc(100vw_-_56px)] md:w-[calc(100vw_-_102px)] h-min py-8 px-6 md:px-14 border-l-4 border-l-variant-1 space-y-4">
+    <div class="grid gap-4 grid-cols-1 md:grid-cols-2 2xl:grid-cols-4">
+      <div class="flex-none h-min p-4 md:p-6 space-y-4">
+        <h3 class="font-black text-2xl md:text-4xl text-variant-1">{% trans "Discovery and UX research" %}</h3>
+        <p class="text-xs md:text-xl">{% trans "We work closely with your team to clearly define goals and success metrics. Heavily researching and invest in planning to move quickly and iteratively. In the end inform our product development team with robust findings and processes in making sure we’re solving the right problems or improving existing ones" %}.</p>
+      </div>
+      <div class="flex-none h-min p-4 md:p-6 space-y-4">
+        <h3 class="font-black text-2xl md:text-4xl text-variant-1">{% trans "UX and UI design" %}</h3>
+        <p class="text-xs md:text-xl">{% trans "We believe good products are built by the people who use them. And, we know user-centered and intentional design is key for market fit. Our UX designers take time to understand the people behind your product and tailor-make solutions precisely for them" %}.</p>
+      </div>
+      <div class="flex-none h-min p-4 md:p-6 space-y-4">
+        <h3 class="font-black text-2xl md:text-4xl text-variant-1">{% trans "Software development and testing" %}</h3>
+        <p class="text-xs md:text-xl">{% trans "We’re tech ginies; combined, we have decades of experience with a wide variety of tech stacks and frameworks. With our expertise, we build scalable and sustainable solutions that serve both your go-to-market strategy and long-term vision." %}</p>
+      </div>
+      <div class="flex-none h-min p-4 md:p-6 space-y-4">
+        <h3 class="font-black text-2xl md:text-4xl text-variant-1">{% trans "Launch and iteration" %}</h3>
+        <p class="text-xs md:text-xl">{% trans "We know that a smooth launch requires adjustments throughout development. We’re firm believers in continual QA and market testing. And, with that approach, we invest in delivering fantastically effective, worthwhile, and seamless user experiences." %}</p>
+      </div>
+    </div>
+    <a href="" class="group flex items-center justify-between md:w-1/4 font-raleway bg-variant-1 text-xs md:text-xl font-black text-dark duration-700 hover:scale-105 rounded py-3 px-6">
+      <span>{% trans 'Check our Services' %}</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:animate-spin" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+      </svg>
+    </a>
+  </div>
+</section>
+
+<section class="w-screen h-min px-4 md:px-14">
+  <div class="space-y-4 border-dashed duration-700 border-[1px] hover:border-[3px] py-10 w-full rounded-xl border-variant-1 text-center font-raleway">
+    <h2 class="text-2xl md:text-5xl font-black">{% trans "Your project here" %}</h2>
+    <p>
+      {% trans "Our proof is in our work." %}
+      <br>
+      <a href="" class="font-black hover:text-variant-1 text-variant-1/70 duration-700">{% trans "View our previous works" %}</a> {% trans "to see how we can transform your business." %}
+    </p>
+    <a href="" class="mx-auto group flex items-center justify-between w-[70%] md:w-1/4 font-raleway bg-variant-1 text-xs md:text-xl font-black text-dark duration-700 hover:scale-105 rounded py-3 px-6">
+      <span>{% trans 'Get in contact' %}</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden group-hover:flex duration-500 ease-in-expo" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M2.94 6.412A2 2 0 002 8.108V16a2 2 0 002 2h12a2 2 0 002-2V8.108a2 2 0 00-.94-1.696l-6-3.75a2 2 0 00-2.12 0l-6 3.75zm2.615 2.423a1 1 0 10-1.11 1.664l5 3.333a1 1 0 001.11 0l5-3.333a1 1 0 00-1.11-1.664L10 11.798 5.555 8.835z" clip-rule="evenodd" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:hidden duration-500 ease-in-expo" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- who we server -->
+<section class="w-screen h-min py-28 px-6 md:px-14 bg-variant-1 text-dark font-raleway mt-14 space-y-10">
+  <div class="space-y-4 md:w-5/12">
+    <h3 class="text-2xl md:text-6xl font-black font-raleway">{% trans 'Our Area of Expertise' %}:</h3>
+    <p>{% trans "Dakrcodr ensures it's services reaches every business in all major sectors, providing exceptional software solutions for large corporations, mid-sized enterprises, and startups. We use industry-specific knowledge and custom-tailor our products to each customer's unique needs." %} </p>
+  </div>
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 w-full h-min flex-wrap">
+    <div class="relative space-x-4 bg-dark rounded-md hover:shadow-lg hover:scale-105 w-full flex items-center flex-none h-[320px] space-y-4 p-8 duration-700">
+      <img src="{% static 'images/industries/finance.svg' %}" alt="finance industry" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
+      <div class="space-y-3 w-full text-light mt-10">
+        <h4 class="text-2xl font-black font-raleway">{% trans "Finance & Insurance" %}</h4>
+        <p>{% trans "We have designed, built and deployed high quality, smart, custom-built and secure finance technology systems." %}</p>
+      </div>
+    </div>
+    <div class="relative space-x-4 bg-dark rounded-md hover:shadow-lg hover:scale-105 w-full flex items-center flex-none h-[320px] space-y-4 p-8 duration-700">
+      <img src="{% static 'images/industries/education.svg' %}" alt="educating industry" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
+      <div class="space-y-3 w-full text-light mt-10">
+        <h4 class="text-2xl font-black font-raleway">{% trans "Education" %}</h4>
+        <p>{% trans "Be it e-learning to School Management Portals, we have got you covered." %}</p>
+      </div>
+    </div>
+    <div class="relative space-x-4 bg-dark rounded-md hover:shadow-lg hover:scale-105 w-full flex items-center flex-none h-[320px] space-y-4 p-8 duration-700">
+      <img src="{% static 'images/industries/construction.svg' %}" alt="construction industry" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
+      <div class="space-y-3 w-full text-light mt-10">
+        <h4 class="text-2xl font-black font-raleway">{% trans "Construction Industry" %}</h4>
+        <p>{% trans "From financing to finish outs, our construction management solution makes it easy to track and manage the many facets of construction projects." %}</p>
+      </div>
+    </div>
+    <div class="relative space-x-4 bg-dark rounded-md hover:shadow-lg hover:scale-105 w-full flex items-center flex-none h-[320px] space-y-4 p-8 duration-700">
+      <img src="{% static 'images/industries/healthcare.svg' %}" alt="healthcare" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
+      <div class="space-y-3 w-full text-light mt-10">
+        <h4 class="text-2xl font-black font-raleway">{% trans "Healthcare" %}</h4>
+        <p>{% trans "Our extensive medical solutions for hospitals and pharmaceuticals companies provides an easier way to process patient data and records. Efficiently aiding to administer treatment on time and efficiently." %}</p>
+      </div>
+    </div>
+    <div class="relative space-x-4 bg-dark rounded-md hover:shadow-lg hover:scale-105 w-full flex items-center flex-none h-[320px] space-y-4 p-8 duration-700">
+      <img src="{% static 'images/industries/transport.svg' %}" alt="Transport industry" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
+      <div class="space-y-3 w-full text-light mt-10">
+        <h4 class="text-2xl font-black font-raleway">{% trans "Transportation" %}</h4>
+        <p>{% trans "From dispatching and job assignments to cargo tracking, ordering automation and performance monitoring, our custom solutions and applications add considerable value to working in the transport and logistic industry." %}</p>
+      </div>
+    </div>
+    <div class="relative space-x-4 bg-dark rounded-md hover:shadow-lg hover:scale-105 w-full flex items-center flex-none h-[320px] space-y-4 p-8 duration-700">
+      <img src="{% static 'images/industries/ecommerce.svg' %}" alt="Commerce & Marketing" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
+      <div class="space-y-3 w-full text-light mt-10">
+        <h4 class="text-2xl font-black font-raleway">{% trans "Commerce & Marketing" %}</h4>
+        <p>{% trans "With custom built CRM systems we support comprehensive operations for wholesale and retail providers — Inventory, Invoicing, Tracking, Shipping and many more." %}</p>
+      </div>
+    </div>
+    <div class="relative space-x-4 bg-dark rounded-md hover:shadow-lg hover:scale-105 w-full flex items-center flex-none h-[320px] space-y-4 p-8 duration-700">
+      <img src="{% static 'images/industries/entertainment.svg' %}" alt="entertainment industry" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
+      <div class="space-y-3 w-full text-light mt-10">
+        <h4 class="text-2xl font-black font-raleway">{% trans "Entertainment Industry" %}</h4>
+        <p>{% trans "When we speak of not leaving any sector out, we meant it. The artists, song composers and producers who provides us with beautiful melodies are no exception to our services." %}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- testimonials -->
+<section x-data="{swiper: null}" 
+x-init="swiper = new Swiper($refs.container, {
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  loop: true,
+  speed: 1000,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  breakpoints: {
+    320: {slidesPerView: 1,spaceBetween: 20},
+    480: {slidesPerView: 2,spaceBetween: 30},
+    640: {slidesPerView: 3,spaceBetween: 40},
+    768: {slidesPerView: 4,spaceBetween: 30,},
+    1524: {slidesPerView: 5,spaceBetween: 30,}
+  ,},})"
+  class="relative w-screen h-min py-6 md:py-16 mt-24 space-y-10 px-6 md:px-14 overflow-x-hidden"
+>
+    <h3 class="text-4xl font-black font-raleway">{% trans 'What our clients are saying' %}:</h3>
+  <div class="absolute inset-y-0 left-2 md:left-12 z-10 flex items-center">
+    <button @click="swiper.slidePrev()" 
+            class="bg-white -ml-2 lg:-ml-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+      <svg viewBox="0 0 20 20" fill="currentColor" class="text-dark chevron-left w-6 h-6"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+    </button>
+  </div>
+
+  <div class="swiper-container w-screen overflow-x-hidden" x-ref="container">
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide rounded-md border-2 border-variant-1 h-min p-6 font-raleway space-y-8">
+        <p class="md:text-xl text-sm">
+          <span class="text-3xl font-black text-variant-1">"</span> Darkcodr Codes was very professional. I never came to a meeting doubting wheyher or not they would be able to prepare for it. <span class="text-3xl font-black  text-variant-1">"</span>
+        </p>
+        <div class="flex items-center w-full h-min space-x-4">
+          <img src="https://i.imgur.com/qZQXxQZ.jpg" alt="testimonial" class="rounded-full h-8 w-8">
+          <div class="text-sm font-raleway">
+            <p class="text-base font-black">
+              <span class="font-bold">John Doe</span>
+              <br>
+              <span class="text-variant-1">CEO, Company</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide rounded-md border-2 border-variant-1 h-min p-6 font-raleway space-y-8">
+        <p class="md:text-xl text-sm">
+          <span class="text-3xl font-black text-variant-1">"</span> Darkcodr Codes was very professional. I never came to a meeting doubting wheyher or not they would be able to prepare for it. <span class="text-3xl font-black  text-variant-1">"</span>
+        </p>
+        <div class="flex items-center w-full h-min space-x-4">
+          <img src="https://i.imgur.com/qZQXxQZ.jpg" alt="testimonial" class="rounded-full h-8 w-8">
+          <div class="text-sm font-raleway">
+            <p class="text-base font-black">
+              <span class="font-bold">John Doe</span>
+              <br>
+              <span class="text-variant-1">CEO, Company</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide rounded-md border-2 border-variant-1 h-min p-6 font-raleway space-y-8">
+        <p class="md:text-xl text-sm">
+          <span class="text-3xl font-black text-variant-1">"</span> Darkcodr Codes was very professional. I never came to a meeting doubting wheyher or not they would be able to prepare for it. <span class="text-3xl font-black  text-variant-1">"</span>
+        </p>
+        <div class="flex items-center w-full h-min space-x-4">
+          <img src="https://i.imgur.com/qZQXxQZ.jpg" alt="testimonial" class="rounded-full h-8 w-8">
+          <div class="text-sm font-raleway">
+            <p class="text-base font-black">
+              <span class="font-bold">John Doe</span>
+              <br>
+              <span class="text-variant-1">CEO, Company</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide rounded-md border-2 border-variant-1 h-min p-6 font-raleway space-y-8">
+        <p class="md:text-xl text-sm">
+          <span class="text-3xl font-black text-variant-1">"</span> Darkcodr Codes was very professional. I never came to a meeting doubting wheyher or not they would be able to prepare for it. <span class="text-3xl font-black  text-variant-1">"</span>
+        </p>
+        <div class="flex items-center w-full h-min space-x-4">
+          <img src="https://i.imgur.com/qZQXxQZ.jpg" alt="testimonial" class="rounded-full h-8 w-8">
+          <div class="text-sm font-raleway">
+            <p class="text-base font-black">
+              <span class="font-bold">John Doe</span>
+              <br>
+              <span class="text-variant-1">CEO, Company</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide rounded-md border-2 border-variant-1 h-min p-6 font-raleway space-y-8">
+        <p class="md:text-xl text-sm">
+          <span class="text-3xl font-black text-variant-1">"</span> Darkcodr Codes was very professional. I never came to a meeting doubting wheyher or not they would be able to prepare for it. <span class="text-3xl font-black  text-variant-1">"</span>
+        </p>
+        <div class="flex items-center w-full h-min space-x-4">
+          <img src="https://i.imgur.com/qZQXxQZ.jpg" alt="testimonial" class="rounded-full h-8 w-8">
+          <div class="text-sm font-raleway">
+            <p class="text-base font-black">
+              <span class="font-bold">John Doe</span>
+              <br>
+              <span class="text-variant-1">CEO, Company</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide rounded-md border-2 border-variant-1 h-min p-6 font-raleway space-y-8">
+        <p class="md:text-xl text-sm">
+          <span class="text-3xl font-black text-variant-1">"</span> Darkcodr Codes was very professional. I never came to a meeting doubting wheyher or not they would be able to prepare for it. <span class="text-3xl font-black  text-variant-1">"</span>
+        </p>
+        <div class="flex items-center w-full h-min space-x-4">
+          <img src="https://i.imgur.com/qZQXxQZ.jpg" alt="testimonial" class="rounded-full h-8 w-8">
+          <div class="text-sm font-raleway">
+            <p class="text-base font-black">
+              <span class="font-bold">John Doe</span>
+              <br>
+              <span class="text-variant-1">CEO, Company</span>
+            </p>
+          </div>
+        </div>
+      </div>
+              
+    </div>
+  </div>
+
+  <div class="absolute inset-y-0 right-4 md:right-14 z-10 flex items-center">
+    <button @click="swiper.slideNext()" 
+            class="bg-white -mr-2 lg:-mr-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+      <svg viewBox="0 0 20 20" fill="currentColor" class="text-dark chevron-right w-6 h-6"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+    </button>
+  </div>
+</section>
+
+<section class="w-screen h-min py-20 px-6 md:px-14 font-raleway">
+  <div class="space-y-4 md:flex md:items-baseline md:justify-between md:space-y-0">
+    <h3 class="text-2xl md:text-6xl font-black font-raleway">{% trans 'Recent Darkcodr Blog' %}:</h3>
+    <a href="" class="text-variant-2 font-bold hover:text-light duration-700">{% trans "Procastinating? Make it educational. Read our blog" %} </a>
+  </div>
+  <div class="md:flex md:items-start md:space-x-6 md:space-y-0 space-y-6 w-full h-min py-10 relative">
+    <article class="cursor-pointer border-variant-1 border-2 text-light group md:w-1/3 w-full h-min rounded-md hover:shadow-md bg-dark overflow-hidden relative duration-700">
+      <img src="{% static 'images/team-nobg.png' %}" alt="blog" class="bg-variant-2 w-full h-60 object-cover">
+      <div class="p-3 w-full justify-between flex items-center text-dark bg-light">
+        <div class="flex items-center text-xs font-bold">Pub: 14th February, 2021</div>
+        <h3 class="text-xs font-black font-raleway">{% trans 'TechED - Ecommerce - Django' %}</h3>
+      </div>
+      <div class="p-6 space-y-6">
+        <h3 class="text-2xl font-black font-raleway">{% trans 'Heading' %}</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </div>
+    </article>
+    <article class="cursor-pointer border-variant-1 border-2 text-light group md:w-1/3 w-full h-min rounded-md hover:shadow-md bg-dark overflow-hidden relative duration-700">
+      <img src="{% static 'images/team-nobg.png' %}" alt="blog" class="bg-variant-2 w-full h-60 object-cover">
+      <div class="p-3 w-full justify-between flex items-center text-dark bg-light">
+        <div class="flex items-center text-xs font-bold">Pub: 14th February, 2021</div>
+        <h3 class="text-xs font-black font-raleway">{% trans 'TechED - Ecommerce - Django' %}</h3>
+      </div>
+      <div class="p-6 space-y-6">
+        <h3 class="text-2xl font-black font-raleway">{% trans 'Heading' %}</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </div>
+    </article>
+    <article class="cursor-pointer border-variant-1 border-2 text-light group md:w-1/3 w-full h-min rounded-md hover:shadow-md bg-dark overflow-hidden relative duration-700">
+      <img src="{% static 'images/team-nobg.png' %}" alt="blog" class="bg-variant-2 w-full h-60 object-cover">
+      <div class="p-3 w-full justify-between flex items-center text-dark bg-light">
+        <div class="flex items-center text-xs font-bold">Pub: 14th February, 2021</div>
+        <h3 class="text-xs font-black font-raleway">{% trans 'TechED - Ecommerce - Django' %}</h3>
+      </div>
+      <div class="p-6 space-y-6">
+        <h3 class="text-2xl font-black font-raleway">{% trans 'Heading' %}</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="w-screen h-min bg-variant-1 px-6 md:px-14 py-24 font-raleway">
+  
+  <form class="border-dark border-2 md:w-1/2 w-full space-y-6 py-8 px-8 rounded-md">
+    <div class="space-y-4">
+      <h3 class="text-dark text-2xl md:text-6xl font-black font-raleway">{% trans 'Get our newsletter' %}:</h3>
+      <p class="text-dark">{% trans "This is a monthly resource for startups, nonprofits, and corporate organizations; a compilation of all things product development and industry." %}
+        <br><br>
+        {% trans "And no, it’s not like all the other newsletters. It’s a *cool* newsletter." %} </p>
+    </div>
+    <div class="space-x-4 flex items-center">
+      <input type="email" placeholder="{% trans 'name@mail.com' %}" class="duration-700 border bg-dark text-light border-slate-300 rounded-md text-sm shadow-sm placeholder-light
+      focus:outline-none focus:border-variant-1 focus:ring-1 focus:ring-variant-1
+      disabled:bg-dark disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+      invalid:border-red-500 invalid:text-red-600
+      focus:invalid:border-red-500 focus:invalid:ring-red-500 block w-3/4">
+      <button type="button" class="bg-light text-dark font-black py-2 hover:scale-105 duration-700 px-10 rounded">{% trans 'Subscribe' %}</button>
+    </div>
+  </form>
+</section>
+{% endblock content %}
+
+
+{% block javascript_inline %}
+<script>
+  new hoverEffect({
+    parent: document.querySelector('.distortion'),
+    intensity: 0.2,
+    image1: '{% static "images/front-nobg.png" %}',
+    image2: '.{% static "images/back-nobg.png" %}',
+    displacementImage: '{% static "images/dis.png" %}',
+    imagesRatio: 380 / 300
+  })
+</script>
+{% endblock javascript_inline %}

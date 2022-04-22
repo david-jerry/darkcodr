@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}Services — {{ block.super }}{% endblock title %}
+{% block description %}{{ block.super }}{% endblock description %}
+{% block kw %}software developers, python developer, jeremiah david, darkcodr, dark coder, website mentor, mentorship program, online learning{% endblock %}
+{% block og_author %}{{ block.super }}{% endblock %}
+{% block og_desc %}{{ block.super }}{% endblock %}
+{% block can_link %}{% url 'about' %}{% endblock %}
+
+
+{% block content %}
+<section class="w-screen relative h-[65vh] bg-variant-1 font-raleway px-6 md:px-14 pt-20">
+  <div class="md:w-2/3 relative px-6 md:px-14 h-full">
+    <div class="text-dark absolute w-full h-min left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 space-y-5">
+      <h1 class="whitespace-normal font-black light flex object-center font-raleway md:text-6xl text-4xl tracking-wider">
+        {% trans 'Our Services' %}
+      </h1>
+      <div class="w-20 h-1 bg-variant-1"></div>
+      <!-- <p class="text-light font-raleway tracking-wide block">
+        We are a team of software developers, designers, and developers who are passionate about building high performance software solutions.
+      </p> -->
+      <h2 class="md:w-3/4 text-dark whitespace-normal font-raleway tracking-wide block md:text-xl text-sm">
+        {% trans '— We drive impact and help start-ups, corporate and non-profits launch solve real-world business challenges. We leverage product strategy, UX research, UX/UI design and software development to help our partners scale and propel their missions.' %}
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="w-screen h-min py-10 px-6 md:px-14 relative font-raleway md:flex md:items-start md:space-x-4 md:space-y-0 space-y-4">
+  <!-- <div class="md:w-1/4 w-full space-y-4 text-2xl">
+    <button class="hover:bg-variant-1 duration-700 bg-light text-dark font-black rounded-md py-3 w-full">{% trans "All Services" %}</button>
+    <button class="hover:bg-variant-1 duration-700 bg-light text-dark font-black rounded-md py-3 w-full">{% trans "Design" %}</button>
+    <button class="hover:bg-variant-1 duration-700 bg-light text-dark font-black rounded-md py-3 w-full">{% trans "Software Development" %}</button>
+    <button class="hover:bg-variant-1 duration-700 bg-light text-dark font-black rounded-md py-3 w-full">{% trans "Product" %}</button>
+  </div> -->
+  <div class="overflow-x-scroll scrollbar-hide md:flex-grow md:w-auto w-full h-[80vh] space-y-5 border-t-variant-1 border-t-2 py-4">
+    <div class="cursor-pointer group md:flex w-full md:items-start space-x-4 rounded-xl overflow-hidden border-variant-1 border-2">
+      <img src="{% static 'images/services/design.svg' %}" alt="" class="overflow-hidden group-hover:scale-110 duration-700 bg-light w-full md:w-1/4 aspect-[1/1]">
+      <div class="w-full space-y-4 p-5">
+        <h3 class="font-black text-2xl md:text-5xl text-variant-1">{% trans "Brand Design & Development" %}</h3>
+        <p>
+          {% blocktrans %}
+          We tell your brand story in clear concise statements and convert same to pixels and colors, designing experiences around your business to delight your clients. 
+          {% endblocktrans %}
+        </p>
+        <p class="text-sm font-black tracking-wider text-variant-2">
+          {% blocktrans %}
+          info architecture • brand persona • mood board • design system • style guides • brand deliverables
+          {% endblocktrans %}
+        </p>
+      </div>
+    </div>
+    <div class="cursor-pointer group md:flex w-full md:items-start space-x-4 rounded-xl overflow-hidden border-variant-1 border-2">
+      <img src="{% static 'images/services/product-design.svg' %}" alt="" class="overflow-hidden group-hover:scale-110 duration-700 bg-light w-full md:w-1/4 aspect-[1/1]">
+      <div class="w-full space-y-4 p-5">
+        <h3 class="font-black text-2xl md:text-5xl text-variant-1">{% trans "Product Auditing" %}</h3>
+        <p>
+          {% blocktrans %}
+          We audit your UX to find its points of success and improvement getting your product ready for a successful launch.
+          {% endblocktrans %}
+        </p>
+        <p class="text-sm font-black tracking-wider text-variant-2">
+          {% blocktrans %}
+          heuristic evaluation • design review • design critique • bench marking • usability testing • product management • design thinking workshop • root problem analysis • backlog grooming • technical project management
+          {% endblocktrans %}
+        </p>
+      </div>
+    </div>
+    <div class="cursor-pointer group md:flex w-full md:items-start space-x-4 rounded-xl overflow-hidden border-variant-1 border-2">
+      <img src="{% static 'images/services/uxui.svg' %}" alt="" class="overflow-hidden group-hover:scale-110 duration-700 bg-light w-full md:w-1/4 aspect-[1/1]">
+      <div class="w-full space-y-4 p-5">
+        <h3 class="font-black text-2xl md:text-5xl text-variant-1">{% trans "UX/UI Auditing" %}</h3>
+        <p>
+          {% blocktrans %}
+          We design user-friendly apps and websites
+          {% endblocktrans %}
+        </p>
+        <p class="text-sm font-black tracking-wider text-variant-2">
+          {% blocktrans %}
+          site mapping • info architecture • user persona, journey, story mapping • low-, high-fidelity wireframes • design system • branding • interactive prototypes • animation • responsive design
+          {% endblocktrans %}
+        </p>
+      </div>
+    </div>
+    <div class="cursor-pointer group md:flex w-full md:items-start space-x-4 rounded-xl overflow-hidden border-variant-1 border-2">
+      <img src="{% static 'images/services/android.svg' %}" alt="" class="overflow-hidden group-hover:scale-110 duration-700 bg-light w-full md:w-1/4 aspect-[1/1]">
+      <div class="w-full space-y-4 p-5">
+        <h3 class="font-black text-2xl md:text-5xl text-variant-1">{% trans "Android App Development" %}</h3>
+        <p>
+          {% blocktrans %}
+          We develop beautiful user-tailored Android Apps
+          {% endblocktrans %}
+        </p>
+        <p class="text-sm font-black tracking-wider text-variant-2">
+          {% blocktrans %}
+          product strategy • UX research • UX/UI design • Kotlin development • Flutter development • backend development • play store submission • automated testing • dev-ops
+          {% endblocktrans %}
+        </p>
+      </div>
+    </div>
+    <div class="cursor-pointer group md:flex w-full md:items-start space-x-4 rounded-xl overflow-hidden border-variant-1 border-2">
+      <img src="{% static 'images/services/ios.svg' %}" alt="" class="overflow-hidden group-hover:scale-110 duration-700 bg-light w-full md:w-1/4 aspect-[1/1]">
+      <div class="w-full space-y-4 p-5">
+        <h3 class="font-black text-2xl md:text-5xl text-variant-1">{% trans "Ios App Development" %}</h3>
+        <p>
+          {% blocktrans %}
+          We craft iOS Apps tailor-made for your users
+          {% endblocktrans %}
+        </p>
+        <p class="text-sm font-black tracking-wider text-variant-2">
+          {% blocktrans %}
+          UX research • UX/UI design • Swift development • Flutter development • dashboard development • backend development • Apple store submission • automated testing • dev-ops
+          {% endblocktrans %}
+        </p>
+      </div>
+    </div>
+    <div class="cursor-pointer group md:flex w-full md:items-start space-x-4 rounded-xl overflow-hidden border-variant-1 border-2">
+      <img src="{% static 'images/services/website.svg' %}" alt="" class="overflow-hidden group-hover:scale-110 duration-700 bg-light w-full md:w-1/4 aspect-[1/1]">
+      <div class="w-full space-y-4 p-5">
+        <h3 class="font-black text-2xl md:text-5xl text-variant-1">{% trans "Web Development" %}</h3>
+        <p>
+          {% blocktrans %}
+          We create maintainable websites that you can adjust as you grow
+          {% endblocktrans %}
+        </p>
+        <p class="text-sm font-black tracking-wider text-variant-2">
+          {% blocktrans %}
+          product strategy • UX research • UX/UI design • Wordpress development • Flutter Web development • CMS configuration • Python development • backend development • custom plugin development • web hosting and operation • admin dashboard
+          {% endblocktrans %}
+        </p>
+      </div>
+    </div>
+    <div class="cursor-pointer group md:flex w-full md:items-start space-x-4 rounded-xl overflow-hidden border-variant-1 border-2">
+      <img src="{% static 'images/services/software.svg' %}" alt="" class="overflow-hidden group-hover:scale-110 duration-700 bg-light w-full md:w-1/4 aspect-[1/1]">
+      <div class="w-full space-y-4 p-5">
+        <h3 class="font-black text-2xl md:text-5xl text-variant-1">{% trans "Software Development" %}</h3>
+        <p>
+          {% blocktrans %}
+          We custom softwares precisely for your needs
+          {% endblocktrans %}
+        </p>
+        <p class="text-sm font-black tracking-wider text-variant-2">
+          {% blocktrans %}
+          product strategy • UX research • UX/UI design • code review and auditing • technical consulting • frontend development • backend development • automated testing • Ruby on Rails development • Golang development • Node.js development • React.JS development • Next.js development • Flutter development • dev-ops
+          {% endblocktrans %}
+        </p>
+      </div>
+    </div>
+    <div class="cursor-pointer group md:flex w-full md:items-start space-x-4 rounded-xl overflow-hidden border-variant-1 border-2">
+      <img src="{% static 'images/services/training.svg' %}" alt="" class="overflow-hidden group-hover:scale-110 duration-700 bg-light w-full md:w-1/4 aspect-[1/1]">
+      <div class="w-full space-y-4 p-5">
+        <h3 class="font-black text-2xl md:text-5xl text-variant-1">{% trans "Staff Training" %}</h3>
+        <p>
+          {% blocktrans %}
+          We provide on-site training for staffs or personnel within your organization
+          {% endblocktrans %}
+        </p>
+        <p class="text-sm font-black tracking-wider text-variant-2">
+          {% blocktrans %}
+          MS Office Training • CMS Training • Software training • Web Development Training • Android Development Training • IOS Development Training • Ruby on Rails Development Training • Golang Development Training • Node.js Development Training • React.JS Development Training • Next.js Development Training • Flutter Development Training • DevOps Training
+          {% endblocktrans %}
+        </p>
+      </div>
+    </div>
+    <div class="cursor-pointer group md:flex w-full md:items-start space-x-4 rounded-xl overflow-hidden border-variant-1 border-2">
+      <img src="{% static 'images/services/cloud.svg' %}" alt="" class="overflow-hidden group-hover:scale-110 duration-700 bg-light w-full md:w-1/4 aspect-[1/1]">
+      <div class="w-full space-y-4 p-5">
+        <h3 class="font-black text-2xl md:text-5xl text-variant-1">{% trans "Cloud Services" %}</h3>
+        <p>
+          {% blocktrans %}
+          We provide cloud services in the most efficient, cost effective way.
+          {% endblocktrans %}
+        </p>
+        <p class="text-sm font-black tracking-wider text-variant-2">
+          {% blocktrans %}
+          Cloud Storage • Cloud computing • SAAS • PAAS • CLoud Engineering • Infrastructural Engineering
+          {% endblocktrans %}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="w-screen h-min bg-variant-1 px-6 md:px-14 py-24 font-raleway">
+  
+  <form class="border-dark border-2 md:w-1/2 w-full space-y-6 py-8 px-8 rounded-md">
+    <div class="space-y-4">
+      <h3 class="text-dark text-2xl md:text-6xl font-black font-raleway">{% trans 'Get our newsletter' %}:</h3>
+      <p class="text-dark">{% trans "This is a monthly resource for startups, nonprofits, and corporate organizations; a compilation of all things product development and industry." %}
+        <br><br>
+        {% trans "And no, it’s not like all the other newsletters. It’s a *cool* newsletter." %} </p>
+    </div>
+    <div class="space-x-4 flex items-center">
+      <input type="email" placeholder="{% trans 'name@mail.com' %}" class="duration-700 border bg-dark text-light border-slate-300 rounded-md text-sm shadow-sm placeholder-light
+      focus:outline-none focus:border-variant-1 focus:ring-1 focus:ring-variant-1
+      disabled:bg-dark disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+      invalid:border-red-500 invalid:text-red-600
+      focus:invalid:border-red-500 focus:invalid:ring-red-500 block w-3/4">
+      <button type="button" class="bg-light text-dark font-black py-2 hover:scale-105 duration-700 px-10 rounded">{% trans 'Subscribe' %}</button>
+    </div>
+  </form>
+</section>
+
+{% endblock content %}

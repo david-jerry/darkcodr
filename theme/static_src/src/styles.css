@@ -1,0 +1,37 @@
+@tailwind base;
+@layer base {
+  body {
+    @apply transition-all duration-500 ease-in-out font-cursive scrollbar-hide md:scrollbar-thin md:scrollbar-thumb-primary text-light bg-dark;
+  }
+}
+
+@tailwind components;
+@layer components {
+
+  .hover-trigger .hover-target {
+    @apply opacity-0 transition-opacity ease-out duration-200 -mt-2;
+  }
+
+  .hover-trigger:hover .hover-target {
+    @apply opacity-100 transition-opacity duration-300 ease-in mt-0;
+  }
+
+  .hover-trigger:hover .icon-3 {
+    @apply bg-variant-1 animate-transform-menu3 translate-y-0 rotate-[40deg] duration-[40ms] ease-in-out
+  }
+
+  .hover-trigger:hover .icon-2 {
+    @apply bg-variant-1 w-0 duration-300 ease-linear
+  }
+
+  .hover-trigger:hover .icon-1 {
+    @apply bg-variant-1 animate-transform-menu1 translate-y-0 -rotate-[40deg] duration-[400ms] ease-in-out
+  }
+
+  .clear {
+    clear: both;
+  }
+
+}
+
+@tailwind utilities;

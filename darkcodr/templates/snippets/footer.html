@@ -1,0 +1,132 @@
+{% load static i18n %}
+
+<footer class="px-6 md:px-14 py-16 relative font-raleway w-screen h-min md:flex md:items-start md:space-x-6 border-t-2 border-t-light">
+  <section class="md:w-1/4 flex-none space-y-4 flex-col items-center justify-between">
+    <div class="flex items-center">
+      <img src="{% static 'images/logo-light.png' %}" alt="darkcodr logo">
+      <h4 class="text-3xl font-black md:text-4xl">arkcodr</h4>
+    </div>
+    <div class="flex items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-variant-1" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+      </svg>
+      <div class="space-y-1 border-l-2 border-l-variant-1 pl-2">
+        <a href="tel:+2347064857582" class="text-base font-semibold">+2347064857582</a>
+        <p class="text-variant-1 text-xs">Business Hours: <span class="font-black text-light">9:00 am - 5:00 pm</span> CAT</p>
+      </div>
+    </div>
+    <div class="flex items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-variant-1" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+      </svg>
+      <div class="space-y-1 border-l-2 border-l-variant-1 pl-2">
+        <a href="https://www.google.com/maps/dir/6.5110016,3.3882112/4+A+Cl,+Gwarinpa+900108,+Abuja/@9.1192637,7.3847565,15.83z/" class="block text-base font-semibold">4 A Close, Gwarimpa, Abuja, NIG.</a>
+        <a href="" class="block text-variant-1 text-xs hover:text-light duration-700">Other Offices</a>
+      </div>
+    </div>
+    <div class="flex items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-variant-1" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+      </svg>
+      <div class="space-y-1 border-l-2 border-l-variant-1 pl-2">
+        <a href="mailto:hello@darkcodr.codes" class="blok text-base font-semibold hover:text-variant-1 duration-700">hello@darkcodr.codes</a>
+        <a href="mailto:support@darkcodr.codes" class="block text-variant-1 text-xs hover:text-light duration-700">support@darkcodr.codes</a>
+      </div>
+    </div>
+    <p>© <span x-text="new Date().getFullYear()" class="text-variant-1 font-black"></span> Darkcodr Codes <a href="" class="border-l-2 border-l-variant-1 text-variant-1 pl-4 ml-4 font-bold">Privacy & Terms</a></p>
+  </section>
+  <section class="hidden md:block md:w-1/4 flex-none space-y-4 flex-col items-center justify-between">
+    <h4 class="text-2xl font-black border-b-variant-1 border-b-2 mb-8 w-2/3">{% trans "All Services" %}</h4>
+    <ul class="space-y-1">
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Brand Design & Development" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Product Design & Strategy" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Software Prototyping" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Web Development" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Mobile Development" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "DevOps Process Automation" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Digital Marketing" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Dedicated Development Team" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Software Maintenance" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Technology Advisory" %}</a>
+      </li>
+    </ul>
+  </section>
+  <section class="hidden md:block md:w-1/4 flex-none space-y-4 flex-col items-center justify-between">
+    <h4 class="text-2xl font-black border-b-variant-1 border-b-2 mb-8 w-2/3">{% trans 'Industries' %}</h4>
+    <ul class="space-y-1">
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Finance" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Health Care" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Mid-Sized Businesses" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Commerce & Marketing" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Education" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Construction" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Entertainment" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Real Estate" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Transportation" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Energy" %}</a>
+      </li>
+    </ul>
+  </section>
+  <section class="hidden md:block md:w-1/4 flex-none space-y-4 flex-col items-center justify-between">
+    <h4 class="text-2xl font-black border-b-variant-1 border-b-2 mb-8 w-2/3">{% trans 'Company' %}</h4>
+    <ul class="space-y-1">
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "About" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Our Team" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Our Blog" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Our Store" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Learning Center" %}</a>
+      </li>
+      <li class="text-variant-1 hover:text-light duration-700">
+        <a href="">{% trans "Mentorship Program" %}</a>
+      </li>
+    </ul>
+  </section>
+</footer>
