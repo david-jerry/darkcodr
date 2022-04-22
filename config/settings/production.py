@@ -14,14 +14,14 @@ except ImproperlyConfigured:
 try:
     ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS").split(',')
 except ImproperlyConfigured:
-    ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["darkcodr.codes", "www.darkcodr.codes", "mail.darkcodr.codes"])
+    ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["darkcodr.codes", "www.darkcodr.codes", "mail.darkcodr.codes", "192.64.114.77:443"])
 
 # DATABASES
 # ------------------------------------------------------------------------------
 DATABASES["default"] = env.db("DATABASE_URL")  # noqa F405
 DATABASES["default"]["ATOMIC_REQUESTS"] = True  # noqa F405
 DATABASES["default"]["CONN_MAX_AGE"] = env.int("CONN_MAX_AGE", default=60)  # noqa F405
-# DATABASES["default"]["ENGINE"] = 'django.contrib.gis.db.backends.postgis'
+DATABASES["default"]["ENGINE"] = 'django.contrib.gis.db.backends.postgis'
 
 # CACHES
 # ------------------------------------------------------------------------------

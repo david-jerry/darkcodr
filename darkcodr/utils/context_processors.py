@@ -76,3 +76,4 @@ def context_settings(request):
     }
 
 
+DJANGO_DEBUG
