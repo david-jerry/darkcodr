@@ -35,6 +35,7 @@ django-countries-plus==2.0.0
 
 geocoder==1.38.1
 ratelim==0.1.6
+django-tinymce==3.4.0
 
 # Language packages for django
 django-parler==2.3
