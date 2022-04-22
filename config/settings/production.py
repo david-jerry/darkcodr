@@ -208,8 +208,8 @@ LOGGING = {
 
 # Your stuff...
 # ------------------------------------------------------------------------------
-# GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH')
-# GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH')
+GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH')
+GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH')
 
 PAYSTACK_SK=env('PAYSTACK_LIVE_SK')
 PAYSTACK_PK=env('PAYSTACK_LIVE_PK')
