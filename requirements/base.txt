@@ -64,4 +64,4 @@ django-crontab==0.7.1
 django-htmx==1.9.0
 
 schedule==1.1.0
-
+gevent==21.12.0
