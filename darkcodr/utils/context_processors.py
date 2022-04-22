@@ -61,6 +61,7 @@ def context_settings(request):
         "settings": settings,
 
         'user_ip': ip,
+        "current_loc": current_loc,
         'location_country': location_country,
         'location_country_code': location_country_code,
         'location_latitude': location_latitude,
