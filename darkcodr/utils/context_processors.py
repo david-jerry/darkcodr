@@ -74,6 +74,3 @@ def context_settings(request):
 
         'site': SimpleLazyObject(lambda: get_current_site(request)) if not settings.DEBUG else "localhost:8000",
     }
-
-
-DJANGO_DEBUG
