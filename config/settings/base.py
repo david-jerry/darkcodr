@@ -457,11 +457,11 @@ TINYMCE_DEFAULT_CONFIG = {
 
 # Maximum size, in bytes, of a request before it will be streamed to the
 # file system instead of into memory.
-FILE_UPLOAD_MAX_MEMORY_SIZE = 262144000  # i.e. 25.0 MB
+FILE_UPLOAD_MAX_MEMORY_SIZE = 26214400000  # i.e. 25.0 MB
 
 # Maximum size in bytes of request data (excluding file uploads) that will be
 # read before a SuspiciousOperation (RequestDataTooBig) is raised.
-DATA_UPLOAD_MAX_MEMORY_SIZE = 262144000  # i.e. 2.5 MB
+DATA_UPLOAD_MAX_MEMORY_SIZE = 26214400000  # i.e. 2.5 MB
 
 # Maximum number of GET/POST parameters that will be read before a
 # SuspiciousOperation (TooManyFieldsSent) is raised.
