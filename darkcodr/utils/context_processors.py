@@ -28,15 +28,15 @@ def context_settings(request):
             ip = '8.8.8.8'
 
     #  Get current location on google map
-    g = GeoIP2()
-    location = g.city(ip)
-    location_country = location["country_name"]
-    location_country_code = location["country_code"]
-    location_latitude = location["latitude"]
-    location_longitude = location["longitude"]
-    location_city = location["city"]
+    # g = GeoIP2()
+    # location = g.city(ip)
+    # location_country = location["country_name"]
+    # location_country_code = location["country_code"]
+    # location_latitude = location["latitude"]
+    # location_longitude = location["longitude"]
+    # location_city = location["city"]
 
-    current_loc = Point(location_longitude, location_latitude, srid=4326)
+    # current_loc = Point(location_longitude, location_latitude, srid=4326)
 
     if dt.hour >= 4 and dt.hour < 12:
         greeting = "Good Morning"
@@ -61,12 +61,12 @@ def context_settings(request):
         "settings": settings,
 
         'user_ip': ip,
-        "current_loc": current_loc,
-        'location_country': location_country,
-        'location_country_code': location_country_code,
-        'location_latitude': location_latitude,
-        'location_longitude': location_longitude,
-        'location_city': location_city,
+        # "current_loc": current_loc,
+        # 'location_country': location_country,
+        # 'location_country_code': location_country_code,
+        # 'location_latitude': location_latitude,
+        # 'location_longitude': location_longitude,
+        # 'location_city': location_city,
 
         # Time greeting
         'greeting': greeting,
