@@ -109,20 +109,24 @@
       <script defer src="{% static 'js/project.js' %}"></script>
       {% endcompress %}
 
+      <!-- adsense -->
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6675078631224950"
      crossorigin="anonymous"></script>
+
+     <!-- propeller -->
+     <meta name="propeller" content="6b4265eb7801018905f116f81c176818">
 
     {% endblock javascript %}
 
   </head>
 
-  <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' class=" overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-anchor scrollbar-track-gray-400 flex flex-col w-screen h-screen flex-none" x-data="{menu:false}">
+  <body id="main"  hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' class=" overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-anchor scrollbar-track-gray-400 flex flex-col w-screen h-screen flex-none" x-data="{menu:false}">
 
     {% block navbar %}
       {% include "snippets/navbar.html" %}
     {% endblock navbar %}
 
-    <main id="main" class="w-screen h-screen pt-14">
+    <main class="w-screen h-screen pt-14">
       {% block content %}
 
       {% endblock content %}
