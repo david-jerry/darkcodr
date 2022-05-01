@@ -56,28 +56,27 @@ urlpatterns = i18n_patterns(
 
     # Your stuff: custom urls includes go here
     path('tinymce/', include('tinymce.urls')),
-    path("<str:language>/<str:url>/", view=switch_language, name="language"),
  ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # flatpages
 if flatpage_views:
-    urlpatterns += [
+    urlpatterns += i18n_patterns (
         path(_("terms/"), flatpage_views.flatpage, {"url": "/terms/"}, name="terms"),
         path(_("cookies/"), flatpage_views.flatpage, {"url": "/cookies/"}, name="cookies"),
         path(_("privacy/"), flatpage_views.flatpage, {"url": "/privacy/"}, name="privacy"),
-    ]
+    )
 
-urlpatterns += [
+urlpatterns += i18n_patterns(
     path('i18n/', include('django.conf.urls.i18n')),
     path("sitemap.xml/", sitemap, kwargs={"sitemaps": sitemaps}, name="sitemap"),
     path("robots.txt/", TemplateView.as_view(template_name="robots.txt", content_type="text/plain"), name="robots"),
-]
+)
 
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
     # these url in browser to see how these error pages look like.
-    urlpatterns += [
+    urlpatterns += i18n_patterns(
         path(
             "400/",
             default_views.bad_request,
@@ -95,11 +94,15 @@ if settings.DEBUG:
         ),
         path("500/", default_views.server_error),
         path("__reload__/", include("django_browser_reload.urls")),
-    ]
+    )
     if "debug_toolbar" in settings.INSTALLED_APPS:
         import debug_toolbar
 
-        urlpatterns = [path("__debug__/", include(debug_toolbar.urls))] + urlpatterns
+        urlpatterns = i18n_patterns(path("__debug__/", include(debug_toolbar.urls))) + urlpatterns
+
+urlpatterns += [
+        path("<str:language>/<str:url>/", view=switch_language, name="language"),
+]
 
 admin.site.site_header = _("DARKCODR CODES DASHBOARD")
 admin.site.site_title = _("DARKCODR CODES DASHBOARD")

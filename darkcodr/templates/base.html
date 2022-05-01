@@ -5,7 +5,7 @@
 {% get_current_language_bidi as LANGUAGE_BIDI %}
 {% get_language_info_list for LANGUAGES as languages %}
 
-<html lang="{{ LANGUAGE_CODE }}" class="max-w-screen max-h-screen">
+<html lang="{{ LANGUAGE_CODE }}" class="max-w-[100vw] max-h-screen">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -26,7 +26,7 @@
     <meta property="og:title" content="{% block og_title %}Darkcodr Codes - High Performance Software Solutions Provider{% endblock %}">
     <meta property="og:type" content="website">
     <meta property="og:description" content="{% block og_desc %}We are a High Performance Software Solutions Provider, existing with a singular purpose to effectively automate business processes, cut down on time and resources, and increase the revenue for businesses.{% endblock %}">
-    <meta property="og:image" content="{% static 'images/logo.jpg' %}">
+    <meta property="og:image" content="{% static 'images/logo-light.png' %}">
     <meta property="og:url" content="http://darkcodr.codes">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:site_name" content="Darkcodr Codes - High Performance Software Solutions Provider">
@@ -109,18 +109,20 @@
       <script defer src="{% static 'js/project.js' %}"></script>
       {% endcompress %}
 
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6675078631224950"
+     crossorigin="anonymous"></script>
 
     {% endblock javascript %}
 
   </head>
 
-  <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' class=" overflow-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-anchor scrollbar-track-gray-460 flex flex-col w-screen h-screen flex-none" x-data="{menu:false}">
+  <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' class=" overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-anchor scrollbar-track-gray-400 flex flex-col w-screen h-screen flex-none" x-data="{menu:false}">
 
     {% block navbar %}
       {% include "snippets/navbar.html" %}
     {% endblock navbar %}
 
-    <main id="main" class="w-screen h-screenpt-14">
+    <main id="main" class="w-screen h-screen pt-14">
       {% block content %}
 
       {% endblock content %}
@@ -188,5 +190,7 @@
     </script>
     {% endcomment %}
     {% endblock inline_javascript %}
+
+    <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "J9Ln0RCsu4");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
   </body>
 </html>
