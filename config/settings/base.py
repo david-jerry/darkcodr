@@ -154,8 +154,11 @@ THIRD_PARTY_APPS = [
     # Get User phone details from IP
     'django_user_agents',
 
+    # frontend bundle with webpacks
     'tailwind',
     'theme',
+    'webpack_boilerplate',
+
     'django_browser_reload'
 ]
 
@@ -241,12 +244,17 @@ MIDDLEWARE = [
 # https://docs.djangoproject.com/en/dev/ref/settings/#static-root
 STATIC_ROOT = str(ROOT_DIR / "staticfiles")
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
-STATICFILES_DIRS = [str(APPS_DIR / "static")]
+STATICFILES_DIRS = [str(ROOT_DIR / "frontend" / "build")]
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
+
+# MANIFEST
+WEBPACK_LOADER = {
+    'MANIFEST_FILE': str(ROOT_DIR / "frontend" / "build" / "manifest.json"),
+}
 
 # MEDIA
 # ------------------------------------------------------------------------------

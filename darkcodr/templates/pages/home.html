@@ -10,7 +10,7 @@
 
 {% block content %}
 <section class="w-screen h-screen pt-20 relative flex items-center">
-  <video class="absolute top-0 left-0 w-screen h-full object-cover" src="{% static 'videos/globe.mp4' %}" muted="muted" loop="loop" autoplay="autoplay"></video>
+  <video class="absolute top-0 left-0 w-screen h-full object-cover" src="{% static 'vendors/videos/globe.mp4' %}" muted="muted" loop="loop" autoplay="autoplay"></video>
   <div class="absolute w-full h-full top-0 left-0 bg-dark/95 mix-blend-normal"></div>
   <div class="md:w-2/4 w-[calc(100%_-_64px)] relative left-8 right-8 md:right-14 md:left-14 top-0 h-full items-start object-center flex-col flex">
     <div class="absolute w-full h-min left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 space-y-5">
@@ -44,7 +44,7 @@
     <div class="absolute w-[420px] h-[420px] left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 ">
       <div class="group absolute w-52 aspect-[1/1] -top-16 space-y-4">
         <div class="bg-anchor rounded-l-full rounded-tr-full overflow-hidden">
-          <img src="{% static 'images/back-nobg.png' %}" alt="no business illustration" class="h-52 aspect-[1/1] object-cover">
+          <img src="{% static 'vendors/images/back-nobg.png' %}" alt="no business illustration" class="h-52 aspect-[1/1] object-cover">
         </div>
         <div class="ml-[60px] rounded-r-full rounded-tl-full w-64 h-8 font-bold font-raleway space-x-4 px-6 bg-gray-700 flex items-center">
           <div class="w-2 h-2 rounded-full bg-anchor animate-ping"></div>
@@ -54,7 +54,7 @@
 
       <div class="absolute group top-8 -right-52 w-min h-min space-y-4">
         <div class=" w-64 h-64  bg-variant-1 rounded-r-full rounded-tl-full overflow-hidden">
-          <img src="{% static 'images/team-nobg.png' %}" alt="team collaboration" class="w-64 aspect-[1/1] object-cover">
+          <img src="{% static 'vendors/images/team-nobg.png' %}" alt="team collaboration" class="w-64 aspect-[1/1] object-cover">
         </div>
         <div class="rounded-l-full rounded-tr-full w-[245px] h-8 font-bold font-raleway space-x-4 px-6 bg-gray-700 -ml-[70px] flex items-center">
           <span>{% trans 'Business Automation' %}</span>
@@ -64,7 +64,7 @@
 
       <div class="absolute group top-64 left-16 w-min h-min space-y-4">
         <div class=" w-36 h-36  bg-variant-2 rounded-l-full rounded-tr-full overflow-hidden">
-          <img src="{% static 'images/automate-business-nobg.png' %}" alt="team collaboration" class="w-36 aspect-[1/1] object-cover -mb-14 block">
+          <img src="{% static 'vendors/images/automate-business-nobg.png' %}" alt="team collaboration" class="w-36 aspect-[1/1] object-cover -mb-14 block">
         </div>
         <div class="rounded-r-full rounded-tl-full w-[170px] h-8 font-bold font-raleway space-x-4 px-6 bg-gray-700 ml-[45%] flex items-center">
           <div class="w-2 h-2 rounded-full bg-variant-2 motion-safe:animate-ping-slower"></div>
@@ -102,7 +102,7 @@
 <section class="w-screen h-min">
   <div class="w-screen h-min flex items-center">
     <div class="flex w-full md:w-1/2 md:h-[420px] aspect-[1/1] object-center md:aspect-[1/2] relative">
-      <img src="{% static 'images/what-we-do.jpg' %}" alt="what we do" class="w-full h-full object-cover absolute">
+      <img src="{% static 'vendors/images/what-we-do.jpg' %}" alt="what we do" class="w-full h-full object-cover absolute">
       <div class="w-full h-full bg-dark/80 absolute"></div>
       <div class="flex flex-col md:w-1/3 object-center h-min space-y-3 z-30 cursor-pointer group absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2">
         <h3 class="font-black font-raleway md:text-6xl uppercase flex md:text-center">{% trans 'How we get things done!' %}</h3>
@@ -174,49 +174,49 @@
   </div>
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 w-full h-min flex-wrap">
     <div class="relative space-x-4 bg-dark rounded-md hover:shadow-lg hover:scale-105 w-full flex items-center flex-none h-[320px] space-y-4 p-8 duration-700">
-      <img src="{% static 'images/industries/finance.svg' %}" alt="finance industry" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
+      <img src="{% static 'vendors/images/industries/finance.svg' %}" alt="finance industry" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
       <div class="space-y-3 w-full text-light mt-10">
         <h4 class="text-2xl font-black font-raleway">{% trans "Finance & Insurance" %}</h4>
         <p>{% trans "We have designed, built and deployed high quality, smart, custom-built and secure finance technology systems." %}</p>
       </div>
     </div>
     <div class="relative space-x-4 bg-dark rounded-md hover:shadow-lg hover:scale-105 w-full flex items-center flex-none h-[320px] space-y-4 p-8 duration-700">
-      <img src="{% static 'images/industries/education.svg' %}" alt="educating industry" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
+      <img src="{% static 'vendors/images/industries/education.svg' %}" alt="educating industry" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
       <div class="space-y-3 w-full text-light mt-10">
         <h4 class="text-2xl font-black font-raleway">{% trans "Education" %}</h4>
         <p>{% trans "Be it e-learning to School Management Portals, we have got you covered." %}</p>
       </div>
     </div>
     <div class="relative space-x-4 bg-dark rounded-md hover:shadow-lg hover:scale-105 w-full flex items-center flex-none h-[320px] space-y-4 p-8 duration-700">
-      <img src="{% static 'images/industries/construction.svg' %}" alt="construction industry" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
+      <img src="{% static 'vendors/images/industries/construction.svg' %}" alt="construction industry" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
       <div class="space-y-3 w-full text-light mt-10">
         <h4 class="text-2xl font-black font-raleway">{% trans "Construction Industry" %}</h4>
         <p>{% trans "From financing to finish outs, our construction management solution makes it easy to track and manage the many facets of construction projects." %}</p>
       </div>
     </div>
     <div class="relative space-x-4 bg-dark rounded-md hover:shadow-lg hover:scale-105 w-full flex items-center flex-none h-[320px] space-y-4 p-8 duration-700">
-      <img src="{% static 'images/industries/healthcare.svg' %}" alt="healthcare" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
+      <img src="{% static 'vendors/images/industries/healthcare.svg' %}" alt="healthcare" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
       <div class="space-y-3 w-full text-light mt-10">
         <h4 class="text-2xl font-black font-raleway">{% trans "Healthcare" %}</h4>
         <p>{% trans "Our extensive medical solutions for hospitals and pharmaceuticals companies provides an easier way to process patient data and records. Efficiently aiding to administer treatment on time and efficiently." %}</p>
       </div>
     </div>
     <div class="relative space-x-4 bg-dark rounded-md hover:shadow-lg hover:scale-105 w-full flex items-center flex-none h-[320px] space-y-4 p-8 duration-700">
-      <img src="{% static 'images/industries/transport.svg' %}" alt="Transport industry" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
+      <img src="{% static 'vendors/images/industries/transport.svg' %}" alt="Transport industry" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
       <div class="space-y-3 w-full text-light mt-10">
         <h4 class="text-2xl font-black font-raleway">{% trans "Transportation" %}</h4>
         <p>{% trans "From dispatching and job assignments to cargo tracking, ordering automation and performance monitoring, our custom solutions and applications add considerable value to working in the transport and logistic industry." %}</p>
       </div>
     </div>
     <div class="relative space-x-4 bg-dark rounded-md hover:shadow-lg hover:scale-105 w-full flex items-center flex-none h-[320px] space-y-4 p-8 duration-700">
-      <img src="{% static 'images/industries/ecommerce.svg' %}" alt="Commerce & Marketing" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
+      <img src="{% static 'vendors/images/industries/ecommerce.svg' %}" alt="Commerce & Marketing" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
       <div class="space-y-3 w-full text-light mt-10">
         <h4 class="text-2xl font-black font-raleway">{% trans "Commerce & Marketing" %}</h4>
         <p>{% trans "With custom built CRM systems we support comprehensive operations for wholesale and retail providers — Inventory, Invoicing, Tracking, Shipping and many more." %}</p>
       </div>
     </div>
     <div class="relative space-x-4 bg-dark rounded-md hover:shadow-lg hover:scale-105 w-full flex items-center flex-none h-[320px] space-y-4 p-8 duration-700">
-      <img src="{% static 'images/industries/entertainment.svg' %}" alt="entertainment industry" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
+      <img src="{% static 'vendors/images/industries/entertainment.svg' %}" alt="entertainment industry" class="w-14 aspect-[1/1] object-contain absolute top-4 left-8">
       <div class="space-y-3 w-full text-light mt-10">
         <h4 class="text-2xl font-black font-raleway">{% trans "Entertainment Industry" %}</h4>
         <p>{% trans "When we speak of not leaving any sector out, we meant it. The artists, song composers and producers who provides us with beautiful melodies are no exception to our services." %}</p>
@@ -226,7 +226,7 @@
 </section>
 
 <!-- testimonials -->
-<section x-data="{swiper: null}" 
+<!-- <section x-data="{swiper: null}"
 x-init="swiper = new Swiper($refs.container, {
   autoplay: {
     delay: 5000,
@@ -245,16 +245,20 @@ x-init="swiper = new Swiper($refs.container, {
     1524: {slidesPerView: 5,spaceBetween: 30,}
   ,},})"
   class="relative w-screen h-min py-6 md:py-16 mt-24 space-y-10 px-6 md:px-14 overflow-x-hidden"
+> -->
+<section x-data="SwiperComponent()"
+x-init="initSwiper()"
+  class="relative w-screen flex-none h-min py-6 md:py-16 mt-24 space-y-10 px-6 md:px-14 overflow-x-hidden"
 >
     <h3 class="text-4xl font-black font-raleway">{% trans 'What our clients are saying' %}:</h3>
   <div class="absolute inset-y-0 left-2 md:left-12 z-10 flex items-center">
-    <button @click="swiper.slidePrev()" 
+    <button @click="prevSlide"
             class="bg-white -ml-2 lg:-ml-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
       <svg viewBox="0 0 20 20" fill="currentColor" class="text-dark chevron-left w-6 h-6"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
     </button>
   </div>
 
-  <div class="swiper-container w-screen overflow-x-hidden" x-ref="container">
+  <div class="swiper-container w-full h-min py-4 overflow-x-hidden" x-ref="container">
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide rounded-md border-2 border-variant-1 h-min p-6 font-raleway space-y-8">
@@ -347,12 +351,12 @@ x-init="swiper = new Swiper($refs.container, {
           </div>
         </div>
       </div>
-              
+
     </div>
   </div>
 
   <div class="absolute inset-y-0 right-4 md:right-14 z-10 flex items-center">
-    <button @click="swiper.slideNext()" 
+    <button @click="nextSlide"
             class="bg-white -mr-2 lg:-mr-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
       <svg viewBox="0 0 20 20" fill="currentColor" class="text-dark chevron-right w-6 h-6"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
     </button>
@@ -366,7 +370,7 @@ x-init="swiper = new Swiper($refs.container, {
   </div>
   <div class="md:flex md:items-start md:space-x-6 md:space-y-0 space-y-6 w-full h-min py-10 relative">
     <article class="cursor-pointer border-variant-1 border-2 text-light group md:w-1/3 w-full h-min rounded-md hover:shadow-md bg-dark overflow-hidden relative duration-700">
-      <img src="{% static 'images/team-nobg.png' %}" alt="blog" class="bg-variant-2 w-full h-60 object-cover">
+      <img src="{% static 'vendors/images/team-nobg.png' %}" alt="blog" class="bg-variant-2 w-full h-60 object-cover">
       <div class="p-3 w-full justify-between flex items-center text-dark bg-light">
         <div class="flex items-center text-xs font-bold">Pub: 14th February, 2021</div>
         <h3 class="text-xs font-black font-raleway">{% trans 'TechED - Ecommerce - Django' %}</h3>
@@ -379,7 +383,7 @@ x-init="swiper = new Swiper($refs.container, {
       </div>
     </article>
     <article class="cursor-pointer border-variant-1 border-2 text-light group md:w-1/3 w-full h-min rounded-md hover:shadow-md bg-dark overflow-hidden relative duration-700">
-      <img src="{% static 'images/team-nobg.png' %}" alt="blog" class="bg-variant-2 w-full h-60 object-cover">
+      <img src="{% static 'vendors/images/team-nobg.png' %}" alt="blog" class="bg-variant-2 w-full h-60 object-cover">
       <div class="p-3 w-full justify-between flex items-center text-dark bg-light">
         <div class="flex items-center text-xs font-bold">Pub: 14th February, 2021</div>
         <h3 class="text-xs font-black font-raleway">{% trans 'TechED - Ecommerce - Django' %}</h3>
@@ -392,7 +396,7 @@ x-init="swiper = new Swiper($refs.container, {
       </div>
     </article>
     <article class="cursor-pointer border-variant-1 border-2 text-light group md:w-1/3 w-full h-min rounded-md hover:shadow-md bg-dark overflow-hidden relative duration-700">
-      <img src="{% static 'images/team-nobg.png' %}" alt="blog" class="bg-variant-2 w-full h-60 object-cover">
+      <img src="{% static 'vendors/images/team-nobg.png' %}" alt="blog" class="bg-variant-2 w-full h-60 object-cover">
       <div class="p-3 w-full justify-between flex items-center text-dark bg-light">
         <div class="flex items-center text-xs font-bold">Pub: 14th February, 2021</div>
         <h3 class="text-xs font-black font-raleway">{% trans 'TechED - Ecommerce - Django' %}</h3>
@@ -407,7 +411,7 @@ x-init="swiper = new Swiper($refs.container, {
   </div>
 </section>
 <section class="w-screen h-min bg-variant-1 px-6 md:px-14 py-24 font-raleway">
-  
+
   <form class="border-dark border-2 md:w-1/2 w-full space-y-6 py-8 px-8 rounded-md">
     <div class="space-y-4">
       <h3 class="text-dark text-2xl md:text-6xl font-black font-raleway">{% trans 'Get our newsletter' %}:</h3>

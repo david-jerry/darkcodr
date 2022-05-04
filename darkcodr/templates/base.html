@@ -1,4 +1,4 @@
-{% load static i18n compress%}
+{% load webpack_loader static i18n compress%}
 
 <!DOCTYPE html>
 {% get_current_language as LANGUAGE_CODE %}
@@ -26,7 +26,7 @@
     <meta property="og:title" content="{% block og_title %}Darkcodr Codes - High Performance Software Solutions Provider{% endblock %}">
     <meta property="og:type" content="website">
     <meta property="og:description" content="{% block og_desc %}We are a High Performance Software Solutions Provider, existing with a singular purpose to effectively automate business processes, cut down on time and resources, and increase the revenue for businesses.{% endblock %}">
-    <meta property="og:image" content="{% static 'images/logo-light.png' %}">
+    <meta property="og:image" content="{% static 'vendors/images/logo-light.png' %}">
     <meta property="og:url" content="http://darkcodr.codes">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:site_name" content="Darkcodr Codes - High Performance Software Solutions Provider">
@@ -55,18 +55,22 @@
     <link rel="dns-prefetch" href="https://dark-bucket.s3.amazonaws.com/">
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&family=Poiret+One&family=Raleway:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;1,100;1,200&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}">
+    <link rel="icon" href="{% static 'vendors/images/favicons/favicon.ico' %}">
 
     {% block css %}
     <!-- Your stuff: Third-party CSS libraries go here -->
-    <link href="{% static 'css/iziToast.min.css' %}" rel="stylesheet">
+    <!-- <link href="{% static 'css/iziToast.min.css' %}" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 
     <!-- This file stores project-specific CSS -->
-    {% compress css %}
-    <link rel="preload" href="{% static 'css/project.css' %}" as="style" />
-    <link rel="stylesheet" href="{% static 'css/project.css' %}" />
-    {% endcompress %}
+    {% comment %}
+      {% compress css %}
+      <link rel="preload" href="{% static 'css/project.css' %}" as="style" />
+      <link rel="stylesheet" href="{% static 'css/project.css' %}" />
+      {% endcompress %}
+    {% endcomment %}
+
+    {% stylesheet_pack 'app' %}
 
     {% endblock %}
     <!-- Le javascript
@@ -74,16 +78,14 @@
     {# Placed at the top of the document so pages load faster with defer #}
     {% block javascript %}
       <!-- Your stuff: Third-party javascript libraries go here -->
-      <!-- swiper js -->
-      <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
-      <script defer src="https://unpkg.com/htmx.org@1.7.0"></script>
+      <!-- <script defer src="https://unpkg.com/htmx.org@1.7.0"></script> -->
 
       <!-- alpinejs -->
-      <script defer src="https://unpkg.com/alpinejs@3.9.5/dist/cdn.min.js"></script>
+      <!-- <script defer src="https://unpkg.com/alpinejs@3.9.5/dist/cdn.min.js"></script> -->
 
       <!-- iziToast -->
-      <script defer src="{% static 'js/iziToast.min.js' %}"></script>
+      <!-- <script defer src="{% static 'js/iziToast.min.js' %}"></script> -->
 
 
 
@@ -98,16 +100,22 @@
 
       <!-- tweenmax gsap plugin for animation -->
       <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
-      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"
       integrity="sha256-3mBEX8I0uMLF7+AUjJeTCelosuorzYpqwBMBPDTyQqY=" crossorigin="anonymous"></script>
 
+      <!-- place project specific Javascript in this file -->
+      {% comment %}
+      <!-- swiper js -->
+      <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
       <!-- hover-effect js -->
       <script src="{% static 'js/hover-effect.umd.js' %}"></script>
-      <!-- place project specific Javascript in this file -->
       {% compress js %}
       <script defer src="{% static 'js/project.js' %}"></script>
       {% endcompress %}
+      {% endcomment %}
+
+      {% javascript_pack 'app' %}
+
 
       <!-- adsense -->
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6675078631224950"
@@ -127,17 +135,18 @@
             a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
       </script>
+
     {% endblock javascript %}
 
   </head>
 
-  <body id="main"  hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' class=" overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-anchor scrollbar-track-gray-400 flex flex-col w-screen h-screen flex-none" x-data="{menu:false}">
+  <body id="main"  hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' class=" overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-anchor scrollbar-track-gray-400 flex flex-col w-screen min-h-screen flex-none" x-data="{menu:false}">
 
     {% block navbar %}
       {% include "snippets/navbar.html" %}
     {% endblock navbar %}
 
-    <main class="w-screen h-screen pt-14">
+    <main class="w-screen min-h-screen pt-14 relative">
       {% block content %}
 
       {% endblock content %}
@@ -205,6 +214,7 @@
     </script>
     {% endcomment %}
     {% endblock inline_javascript %}
+
 
     <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "J9Ln0RCsu4");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
 
