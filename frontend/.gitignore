@@ -2,7 +2,7 @@
 node_modules
 
 # production
-build/index.html
+build
 
 # misc
 .DS_Store
