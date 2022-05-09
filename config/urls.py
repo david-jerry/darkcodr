@@ -34,7 +34,7 @@ sitemaps = {
 
 urlpatterns = i18n_patterns(
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-    # path("sw.js", service_worker, name="service_worker"),
+    path("sw.js", service_worker, name="service_worker"),
     path("offline/", TemplateView.as_view(template_name="pages/offline.html"), name="offline"),
     path("create-wp-subscription", AnonymousWebPushDeviceViewSet.as_view({"post": "create"}), name="create-wp-subscription"),
     path("send-notification", send_notification, name="send-notification"),
@@ -64,7 +64,7 @@ urlpatterns = i18n_patterns(
     settings.STATIC_URL, document_root=settings.STATIC_ROOT
 )
 
-urlpatterns += [path("sw.js", service_worker, name="service_worker")]
+# urlpatterns += [path("sw.js", service_worker, name="service_worker")]
 
 # flatpages
 if flatpage_views:
