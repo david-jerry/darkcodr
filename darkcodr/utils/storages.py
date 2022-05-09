@@ -13,7 +13,9 @@ class StaticRootS3Boto3Storage(S3Boto3Storage):
         return name
 
     def _normalize_name(self, name):
-        return name
+        if not name.startsswith('/'):
+            name = name.replace('/', 1)
+            return name
 
 
 class MediaRootS3Boto3Storage(S3Boto3Storage):
@@ -25,8 +27,9 @@ class MediaRootS3Boto3Storage(S3Boto3Storage):
         return name
 
     def _normalize_name(self, name):
-        return name
-
+        if not name.startsswith('/'):
+            name = name.replace('/', 1)
+            return name
 
 class ProtectedRootS3Boto3Storage(S3Boto3Storage):
     location = "protected"
@@ -38,7 +41,9 @@ class ProtectedRootS3Boto3Storage(S3Boto3Storage):
         return name
 
     def _normalize_name(self, name):
-        return name
+        if not name.startsswith('/'):
+            name = name.replace('/', 1)
+            return name
 
 
 def get_logo_upload_folder(instance, pathname):
