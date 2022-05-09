@@ -44,7 +44,7 @@ django-filebrowser-no-grappelli==4.0.0 #https://github.com/smacker/django-filebr
 # Language packages for django
 django-parler==2.3
 django-rosetta==0.9.8
-loguru==0.5.3
+loguru==0.6.0
 
 django-mathfilters==1.0.0
 django-social-share==2.2.1
