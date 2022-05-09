@@ -48,9 +48,9 @@
     "app": {
       "assets": {
         "js": [
-          "https://darkcodr-bucket.s3.amazonaws.comhttps://darkcodr-bucket.s3.amazonaws.com/static/js/runtime.6890da2c.js",
-          "https://darkcodr-bucket.s3.amazonaws.comhttps://darkcodr-bucket.s3.amazonaws.com/static/js/259.f94e0036.js",
-          "https://darkcodr-bucket.s3.amazonaws.comhttps://darkcodr-bucket.s3.amazonaws.com/static/js/app.38eadbaf.js"
+          "https://darkcodr-bucket.s3.amazonaws.com/static/js/runtime.6890da2c.js",
+          "https://darkcodr-bucket.s3.amazonaws.com/static/js/259.f94e0036.js",
+          "https://darkcodr-bucket.s3.amazonaws.com/static/js/app.38eadbaf.js"
         ],
         "css": [
           "https://darkcodr-bucket.s3.amazonaws.com/static/css/app.6cd764eba6cd32f920db.css"
@@ -60,8 +60,8 @@
     "app2": {
       "assets": {
         "js": [
-          "https://darkcodr-bucket.s3.amazonaws.comhttps://darkcodr-bucket.s3.amazonaws.com/static/js/runtime.6890da2c.js",
-          "https://darkcodr-bucket.s3.amazonaws.comhttps://darkcodr-bucket.s3.amazonaws.com/static/js/app2.c2ed66cf.js"
+          "https://darkcodr-bucket.s3.amazonaws.com/static/js/runtime.6890da2c.js",
+          "https://darkcodr-bucket.s3.amazonaws.com/static/js/app2.c2ed66cf.js"
         ]
       }
     }
