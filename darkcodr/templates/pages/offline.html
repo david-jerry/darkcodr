@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {{ block.super }} | Offline Page
+{% endblock title %}
+
+
+{% block content %}
+<section class="w-full text-center font-bold space-y-4">
+  <h1 class="text-4xl font-black">{% trans "Your browser is currently offline." %}</h1>
+  <p>You are viewing this page because the network of yoru device is turned off. Please note, once you turn it back on or subscribe for data, this page will automatically refresh and you will be redirected to your previous online navigation</p>
+</section>
+{% endblock content %}
+
+{% block inline_javascript %}
+  <script>
+    // Listen to network change (offline | online)
+    window.addEventListener('online', () => {
+      window.location.reload();
+    });
+
+    // check if server is responding and reload if it is
+    async function checkNetworkAndReload() {
+      try {
+        const response = await fetch('.');
+        if (response.status >= 200 && response.status < 500) {
+          window.location.reload();
+          return;
+        }
+      } catch {
+      }
+      window.setTimeout(checkNetworkAndReload, 2500);
+    }
+
+    checkNetworkAndReload();
+  </script>
+{% endblock inline_javascript %}

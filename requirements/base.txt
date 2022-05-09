@@ -19,7 +19,7 @@ django-redis==5.2.0  # https://github.com/jazzband/django-redis
 
 django-htmlmin==0.11.0 # https://django-tailwind.readthedocs.io/en/latest/installation.html
 django-tailwind==3.1.1 # https://pypi.org/project/django-tailwind/
-python-webpack-boilerplate-0.0.10
+python-webpack-boilerplate==0.0.10
 
 readtime==1.1.1
 django-shell-plus==1.1.7

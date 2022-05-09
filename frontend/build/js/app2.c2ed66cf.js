@@ -1,0 +1,2 @@
+(self.webpackChunkpython_webpack_boilerplate=self.webpackChunkpython_webpack_boilerplate||[]).push([[334],{1749:function(e,n,o){"use strict";o(1786),window.document.addEventListener("DOMContentLoaded",(function(){window.console.log("dom ready 2")}))},1786:function(){window.console.log("sidebar is loaded")}},function(e){e(e.s=1749)}]);
+//# sourceMappingURL=app2.c2ed66cf.js.map
