@@ -13,8 +13,8 @@ class StaticRootS3Boto3Storage(S3Boto3Storage):
         return name
 
     def _normalize_name(self, name):
-        if name.startswith('/'):
-            name = name.lstrip("/")
+        if name.startswith('/static/'):
+            name = name.lstrip("/static/")
 
         name = self.location + name
         return name
@@ -29,8 +29,8 @@ class MediaRootS3Boto3Storage(S3Boto3Storage):
         return name
 
     def _normalize_name(self, name):
-        if name.startswith('/'):
-            name = name.lstrip("/")
+        if name.startswith('/static/'):
+            name = name.lstrip("/static/")
 
         name = self.location + name
         return name
@@ -46,8 +46,8 @@ class ProtectedRootS3Boto3Storage(S3Boto3Storage):
         return name
 
     def _normalize_name(self, name):
-        if name.startswith('/'):
-            name = name.lstrip("/")
+        if name.startswith('/static/'):
+            name = name.lstrip("/static/")
 
         name = self.location + name
         return name
