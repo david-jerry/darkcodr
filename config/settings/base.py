@@ -244,8 +244,10 @@ MIDDLEWARE = [
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#static-root
 STATIC_ROOT = str(ROOT_DIR / "staticfiles")
+# https://docs.djangoproject.com/en/dev/ref/settings/#static-url
+STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
-STATICFILES_DIRS = [str(ROOT_DIR / "frontend" / "build")]
+STATICFILES_DIRS = [str(APPS_DIR / "static")]
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
@@ -254,7 +256,7 @@ STATICFILES_FINDERS = [
 
 # MANIFEST
 WEBPACK_LOADER = {
-    'MANIFEST_FILE': str(ROOT_DIR / "frontend" / "build" / "manifest.json"),
+    'MANIFEST_FILE': str(APPS_DIR / "manifest.json"),
 }
 
 # MEDIA
