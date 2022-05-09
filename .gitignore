@@ -274,3 +274,4 @@ darkcodr/media/
 .pytest_cache/
 .env
 .envs/*
+*.pem

@@ -1259,6 +1259,10 @@ body::-webkit-scrollbar {
   width: 70%;
 }
 
+.w-\[calc\(100\%_-_24px\)\] {
+  width: calc(100% - 24px);
+}
+
 .w-14 {
   width: 3.5rem;
 }
@@ -1903,6 +1907,11 @@ body::-webkit-scrollbar {
   padding-bottom: 1rem;
 }
 
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -1911,11 +1920,6 @@ body::-webkit-scrollbar {
 .py-14 {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .py-28 {
@@ -1936,6 +1940,11 @@ body::-webkit-scrollbar {
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .pt-14 {

@@ -16,7 +16,7 @@ from filebrowser.sites import site as filebrowser
 
 from config.sitemaps import StaticViewSitemap
 
-from darkcodr.core.views import switch_language
+from darkcodr.core.views import switch_language, service_worker, AnonymousWebPushDeviceViewSet, send_notification
 
 sitemaps = {
     "static": StaticViewSitemap,
@@ -34,6 +34,10 @@ sitemaps = {
 
 urlpatterns = i18n_patterns(
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    # path("sw.js", service_worker, name="service_worker"),
+    path("offline/", TemplateView.as_view(template_name="pages/offline.html"), name="offline"),
+    path("create-wp-subscription", AnonymousWebPushDeviceViewSet.as_view({"post": "create"}), name="create-wp-subscription"),
+    path("send-notification", send_notification, name="send-notification"),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
     ),
@@ -56,21 +60,25 @@ urlpatterns = i18n_patterns(
 
     # Your stuff: custom urls includes go here
     path('tinymce/', include('tinymce.urls')),
- ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(
+    settings.STATIC_URL, document_root=settings.STATIC_ROOT
+)
+
+urlpatterns += [path("sw.js", service_worker, name="service_worker")]
 
 # flatpages
 if flatpage_views:
-    urlpatterns += i18n_patterns (
+    urlpatterns += [
         path(_("terms/"), flatpage_views.flatpage, {"url": "/terms/"}, name="terms"),
         path(_("cookies/"), flatpage_views.flatpage, {"url": "/cookies/"}, name="cookies"),
         path(_("privacy/"), flatpage_views.flatpage, {"url": "/privacy/"}, name="privacy"),
-    )
+    ]
 
-urlpatterns += i18n_patterns(
+urlpatterns += [
     path('i18n/', include('django.conf.urls.i18n')),
     path("sitemap.xml/", sitemap, kwargs={"sitemaps": sitemaps}, name="sitemap"),
     path("robots.txt/", TemplateView.as_view(template_name="robots.txt", content_type="text/plain"), name="robots"),
-)
+]
 
 
 if settings.DEBUG:

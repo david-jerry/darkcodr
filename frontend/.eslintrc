@@ -1,10 +1,11 @@
 {
-  "parser": "@babel/eslint-parser",
+  "parser": "babel-eslint",
   "extends": [
     "eslint:recommended"
   ],
   "env": {
     "browser": true,
+    "es6": true,
     "node": true
   },
   "parserOptions": {
@@ -12,6 +13,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "semi": 2
+    "semi": 2,
+    "no-useless-escape": "off"
   }
 }

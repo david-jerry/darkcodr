@@ -16,19 +16,14 @@ module.exports = merge(common, {
     publicPath: "http://localhost:9091/",
   },
   devServer: {
+    hot: true,
     host: "0.0.0.0",
     port: 9091,
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
-    // devMiddleware: {
     writeToDisk: true,
-    // },
-    // watchFiles: [
-    //   Path.join(__dirname, "../../darkcodr/**/*.py"),
-    //   Path.join(__dirname, "../../darkcodr/**/*.html"),
-    //   Path.join(__dirname, "../../darkcodr/**/*.js"),
-    // ],
+    
   },
   plugins: [
     new Webpack.DefinePlugin({
@@ -66,6 +61,7 @@ module.exports = merge(common, {
             },
           },
           "postcss-loader",
+          "sass-loader",
         ],
       },
     ],

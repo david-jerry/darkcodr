@@ -57,6 +57,7 @@ def context_settings(request):
 
     return {
         "ACCOUNT_ALLOW_REGISTRATION": settings.ACCOUNT_ALLOW_REGISTRATION,
+        "APPLICATION_SERVER_KEY": settings.PUSH_NOTIFICATIONS_SETTINGS['APP_SERVER_KEY'],
         "DEBUG": settings.DEBUG,
         "settings": settings,
 

@@ -1,6 +1,6 @@
 {% load static i18n %}
 
-<footer class="px-6 md:px-14 py-16 relative font-raleway w-screen h-min md:flex md:items-start md:space-x-6 border-t-2 border-t-light">
+<footer class="px-3 md:px-14 py-16 relative font-raleway w-screen h-min md:flex md:items-start md:space-x-6 border-t-2 border-t-light">
   <section class="md:w-1/4 flex-none space-y-4 flex-col items-center justify-between">
     <div class="flex items-center">
       <img src="{% static 'vendors/images/logo-light.png' %}" alt="darkcodr logo">
@@ -33,6 +33,10 @@
         <a href="mailto:hello@darkcodr.codes" class="blok text-base font-semibold hover:text-variant-1 duration-700">hello@darkcodr.codes</a>
         <a href="mailto:support@darkcodr.codes" class="block text-variant-1 text-xs hover:text-light duration-700">support@darkcodr.codes</a>
       </div>
+    </div>
+    <div class="flex flex-col space-y-4 flex-grow flex-none">
+      <button type="button" id="installButton" class="w-full hidden flex-none bg-variant-1 rounded-xl py-4 px-6 font-black font-raleway hover:scale-105 focus:scale-105 duration-[400ms] ease-linear text-dark tracking-wider">{% trans "Install Offline Version" %}</button>
+      <button type="button" id="triggerNotificationButton" class="w-full hidden flex-none bg-light rounded-xl py-4 px-6 font-black font-raleway hover:scale-105 focus:scale-105 duration-[400ms] ease-linear text-dark tracking-wider">{% trans "Send Push Notif" %}</button>
     </div>
     <p>© <span x-text="new Date().getFullYear()" class="text-variant-1 font-black"></span> Darkcodr Codes <a href="" class="border-l-2 border-l-variant-1 text-variant-1 pl-4 ml-4 font-bold">Privacy & Terms</a></p>
   </section>

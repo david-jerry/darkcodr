@@ -158,6 +158,7 @@ THIRD_PARTY_APPS = [
     'tailwind',
     'theme',
     'webpack_boilerplate',
+    'push_notifications',
 
     'django_browser_reload'
 ]
@@ -540,3 +541,13 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 
 GOOGLE_API=env('GOOGLE_API_KEY')
+
+PUSH_NOTIFICATIONS_SETTINGS = {
+    'WP_CLAIMS': {
+        "sub": "mailto: michaelyin@accordbox.com"
+    },
+    'WP_ERROR_TIMEOUT': 10,  # timeout for the request on the push server
+    'UPDATE_ON_DUPLICATE_REG_ID': True,
+    'APP_SERVER_KEY': env('VAPID_SK'),
+    'WP_PRIVATE_KEY': 'private_key.pem',
+}
