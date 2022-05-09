@@ -9,13 +9,13 @@ class StaticRootS3Boto3Storage(S3Boto3Storage):
     location = "static"
     default_acl = "public-read"
 
-    def _clean_name(self, name):
-        return name
+    # def _clean_name(self, name):
+    #     return name
 
-    def _normalize_name(self, name):
-        if name.startswith('/'):
-            name = name.replace('/', '', 1)
-            return name
+    # def _normalize_name(self, name):
+    #     if name.startswith('/'):
+    #         name = name.replace('/', '', 1)
+    #         return name
 
 
 class MediaRootS3Boto3Storage(S3Boto3Storage):
@@ -23,13 +23,13 @@ class MediaRootS3Boto3Storage(S3Boto3Storage):
     default_acl = "public-read"
     file_overwrite = False
 
-    def _clean_name(self, name):
-        return name
+    # def _clean_name(self, name):
+    #     return name
 
-    def _normalize_name(self, name):
-        if name.startswith('/'):
-            name = name.replace('/', '', 1)
-            return name
+    # def _normalize_name(self, name):
+    #     if name.startswith('/'):
+    #         name = name.replace('/', '', 1)
+    #         return name
 
 class ProtectedRootS3Boto3Storage(S3Boto3Storage):
     location = "protected"
@@ -37,13 +37,13 @@ class ProtectedRootS3Boto3Storage(S3Boto3Storage):
     file_overwrite = False
     custom_domain = False
 
-    def _clean_name(self, name):
-        return name
+    # def _clean_name(self, name):
+    #     return name
 
-    def _normalize_name(self, name):
-        if name.startswith('/'):
-            name = name.replace('/', '', 1)
-            return name
+    # def _normalize_name(self, name):
+    #     if name.startswith('/'):
+    #         name = name.replace('/', '', 1)
+    #         return name
 
 
 def get_logo_upload_folder(instance, pathname):
