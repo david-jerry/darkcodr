@@ -48,6 +48,13 @@ def service_worker(request):
     }
     return render(request, sw_path, content_type="application/javascript", context=context)
 
+@require_http_methods(['GET'])
+def service_worker_map(request):
+    sw_path = "sw.js.map"
+    response = HttpResponse(open(sw_path).read(), content_type='application/javascript')
+    return response
+
+
 def manifest(request):
     sw_path = "manifest.json"
     context = {

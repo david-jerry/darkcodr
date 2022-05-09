@@ -16,7 +16,7 @@ from filebrowser.sites import site as filebrowser
 
 from config.sitemaps import StaticViewSitemap
 
-from darkcodr.core.views import manifest, switch_language, service_worker, AnonymousWebPushDeviceViewSet, send_notification
+from darkcodr.core.views import manifest, service_worker_map, switch_language, service_worker, AnonymousWebPushDeviceViewSet, send_notification
 
 sitemaps = {
     "static": StaticViewSitemap,
@@ -35,6 +35,7 @@ sitemaps = {
 urlpatterns = i18n_patterns(
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path("sw.js", service_worker, name="service_worker"),
+    path("sw.js,map", service_worker_map, name="service_worker_map"),
     path("manifest.json", manifest, name="manifest"),
     path("offline/", TemplateView.as_view(template_name="pages/offline.html"), name="offline"),
     path("create-wp-subscription", AnonymousWebPushDeviceViewSet.as_view({"post": "create"}), name="create-wp-subscription"),
