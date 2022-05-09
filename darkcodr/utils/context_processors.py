@@ -10,6 +10,7 @@ from django.contrib.gis.db.models.functions import GeometryDistance
 from django.contrib.gis.geos import Point
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.functional import SimpleLazyObject
+from django.urls import reverse
 
 from darkcodr.utils.logger import LOGGER
 
@@ -72,6 +73,7 @@ def context_settings(request):
         # Time greeting
         'greeting': greeting,
         'sleep_time': sleep,
+        'home_url': reverse('home'),
 
         'site': SimpleLazyObject(lambda: get_current_site(request)) if not settings.DEBUG else "localhost:8000",
     }

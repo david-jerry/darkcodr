@@ -49,9 +49,20 @@ def service_worker(request):
     return render(request, sw_path, content_type="application/javascript", context=context)
 
 def manifest(request):
-    sw_path = settings.APPS_DIR / "static/assets/manifest.json"
-    response = HttpResponse(open(sw_path).read(), content_type="application/javascript")
-    return response
+    sw_path = "manifest.json"
+    context = {
+        "home_url": reverse('home'),
+        "36x36": static("assets/android-chrome-36x36.png"),
+        "48x48": static("assets/android-chrome-48x48.png"),
+        "72x72": static("assets/android-chrome-72x72.png"),
+        "96x96": static("assets/android-chrome-96x96.png"),
+        "144x144": static("assets/android-chrome-144x144.png"),
+        "192x192": static("assets/android-chrome-192x192.png"),
+        "256x256": static("assets/android-chrome-256x256.png"),
+        "384x384": static("assets/android-chrome-384x384.png"),
+        "512x512": static("assets/android-chrome-512x512.png")
+    }
+    return render(request, sw_path, content_type="application/javascript", context=context)
 
 class AnonymousWebPushDeviceViewSet(WebPushDeviceViewSet):
     def perform_create(self, serializer):

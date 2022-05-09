@@ -43,6 +43,11 @@ module.exports = {
       logo: "./vendors/images/logo.png",
       // Prefix path for generated assets
       prefix: "assets/",
+      developerName: "Jeremiah E. David",
+      developerURL: "http://darkocdr.codes",
+      appleStatusBarStyle: "black-translucent",
+      scope: "/",
+      start_url: "/?homescreen=1",
       devMode: "webapp", // optional can be 'webapp' or 'light' - 'light' by default
       // Favicons configuration options. Read more on: https://github.com/evilebottnawi/favicons#usage
       favicons: {
