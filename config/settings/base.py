@@ -256,7 +256,7 @@ STATICFILES_FINDERS = [
 
 # MANIFEST
 WEBPACK_LOADER = {
-    'MANIFEST_FILE': str(APPS_DIR / "manifest.json"),
+    'MANIFEST_FILE': str(APPS_DIR / "static" / "manifest.json"),
 }
 
 # MEDIA
