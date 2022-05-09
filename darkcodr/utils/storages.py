@@ -16,7 +16,7 @@ class StaticRootS3Boto3Storage(S3Boto3Storage):
         if not name.endswith('/'):
             name += "/"
 
-        name += self.location
+        name = self.location + name
         return name
 
 
@@ -32,7 +32,7 @@ class MediaRootS3Boto3Storage(S3Boto3Storage):
         if not name.endswith('/'):
             name += "/"
 
-        name += self.location
+        name = self.location + name
         return name
 
 
@@ -49,7 +49,7 @@ class ProtectedRootS3Boto3Storage(S3Boto3Storage):
         if not name.endswith('/'):
             name += "/"
 
-        name += self.location
+        name = self.location + name
         return name
 
 
