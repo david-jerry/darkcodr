@@ -1,6 +1,7 @@
 import datetime
 
 from decimal import Decimal
+from urllib import response
 from django.utils import translation
 
 from django.db.models import Sum
@@ -46,6 +47,11 @@ def service_worker(request):
         "offline_revision": 123456
     }
     return render(request, sw_path, content_type="application/javascript", context=context)
+
+def manifest(request):
+    sw_path = settings.APPS_DIR / "static/assets/manifest.json"
+    response = HttpResponse(open(sw_path).read(), content_type="application/javascript")
+    return response
 
 class AnonymousWebPushDeviceViewSet(WebPushDeviceViewSet):
     def perform_create(self, serializer):
