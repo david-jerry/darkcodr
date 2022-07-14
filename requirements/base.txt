@@ -58,7 +58,7 @@ user-agents==2.2.0
 
 # show map in django admin
 django-leaflet==0.28.2
-setuptools==59.1.1
+setuptools==63.2.0
 
 django-autoslug==1.9.8
 django-crontab==0.7.1
